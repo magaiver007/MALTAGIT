@@ -24,11 +24,11 @@ check if the user has put already funds and if so just up the index value withou
 table with 3 rows example
 
 
-user.address|	user.index|		funds.amount|
-0x23984			1				123
-				2				123123
-0x53453			1				1235
-0x45364			1				2345						
+user.address|	user.index|	funds.amount|
+0x23984		1		123
+		2		123123
+0x53453		1		1235
+0x45364		1		2345						
 
 	
 
