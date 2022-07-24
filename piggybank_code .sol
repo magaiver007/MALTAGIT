@@ -18,6 +18,7 @@ contract piggybank{
     uint256 _timenow;
     uint deploymentTime;
     uint256 withdrawalDate;
+    
 	
 	constructor(){
         agreement = false;
@@ -25,6 +26,20 @@ contract piggybank{
 		b = false;
         deploymentTime = block.timestamp;
     }
+
+    //initialize struct childrenAddresses
+    struct ChildrenAddresses {
+        string name ;
+        address childaddress;
+    }
+    ChildrenAddresses[] public childrenAddresses;
+
+    //function with which the parents record the children's addresses that will be used to withdraw the funds 
+    function addAddress(string memory _name, address _childaddress) public {
+        childrenAddresses.push (ChildrenAddresses(_name,_childaddress));
+        
+    }
+
 	
 	//functions that with the input of the user become true 
 	//each function costs gas fees
@@ -64,6 +79,13 @@ contract piggybank{
     }
 
     
+    function withdrawFunds() public payable {
+        require (agreement == true,"Get your shit together");
+        
+
+    }
+
+
       
     /*
     function withdrawFunds() public payable{
@@ -93,5 +115,14 @@ contract piggybank{
         b = false;
         agreement = false;
     }
+
+    function isnikoshere(string _childsname) public view returns (address){
+        return ChildrenAddresses(address(childrenAddresses[_childsname])).retrieve;
+
+
+    }
+    
+
+
 
 }

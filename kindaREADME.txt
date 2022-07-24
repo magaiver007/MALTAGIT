@@ -76,29 +76,8 @@ function getDataWithId(uint256 _id) public view returns {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+once the children agree on splitting the money the deposit function will stop excistig 
+when the agreement happens a function is called to divide the money by 2 
+and each time someone withdraws money the amount will be recorded and when the total
+amount reaches the amount that he is entitled for his address will not be able to withdraw more funds 
 
